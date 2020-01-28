@@ -8311,7 +8311,7 @@ CONTAINS
                      )
                   IF (unit_nr > 0 .AND. debug_mode) WRITE (unit_nr, *) "...Step size to border: ", step_size
                   IF (step_size .GT. 1.0_dp .OR. step_size .LT. 0.0_dp) THEN
-                     IF (unit_nr > 0) &
+                     IF (unit_nr > 0)  &
                         WRITE (unit_nr, *) "Step size (", step_size, ") must lie inside (0,1)"
                      CPABORT("Wrong dog leg step. We should never end up here.")
                   ENDIF
